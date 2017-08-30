@@ -203,7 +203,8 @@ p, h1, h2, h3, h4, h5, h6, .fs6 {
   font-size: 16px
 }
 
-.border-box, .unit, .miBox, .search-history, .codePoint input, .dl0 dt, .unitRight, .codePoint .liga, .dl0 dd, .w-main, textarea:focus, .border-box input, .textbox0, .btn0, .btn0-embossed, .btn0-embossed:hover, .btn0-popup:hover, .btn0[disabled]:hover, [disabled].btn0-embossed:hover, .btn1, .btn1-embossed, .btn1-embossed:focus, .btn2, .btn2-embossed, .btn2-embossed:focus, .btn3, .btn3-embossed, .btn3-embossed:focus, .btn4, .btn7, .btn7-embossed, .btn7-embossed:focus, .btn8, .btn8-embossed, .btn9, .overlayWindow {
+.border-box, .unit, .miBox, .search-history, .codePoint input, .dl0 dt, .unitRight, .codePoint .liga, .dl0 dd, .w-main, textarea:focus, .border-box input, .textbox0,
+.btn0, .btn0-embossed, .btn0-embossed:hover, .btn0-popup:hover, .btn0[disabled]:hover, [disabled].btn0-embossed:hover, .btn1, .btn1-embossed, .btn1-embossed:focus, .btn2, .btn2-embossed, .btn2-embossed:focus, .btn3, .btn3-embossed, .btn3-embossed:focus, .btn4, .btn7, .btn7-embossed, .btn7-embossed:focus, .btn8, .btn8-embossed, .btn9, .overlayWindow {
   -moz-box-sizing: border-box;
   box-sizing: border-box
 }
@@ -588,11 +589,15 @@ a, .btn5:hover, .menuList1 button:hover, .menuList1 a:hover, .menuList1 .menuIte
 }
 
 .bgc6, .btn1, .btn1-embossed, .btn1-embossed:focus, .btn2, .btn2-embossed, .btn2-embossed:focus, .btn3, .btn3-embossed, .btn3-embossed:focus, .btn4, .btn7, .btn7-embossed, .btn7-embossed:focus, .btn8, .btn8-embossed, .icon, .icon2, .mi-boxed.mi-selected .icon, .mi-boxed.mi-selected .icon2, #uniCharts button:hover, #uniCharts button:active {
-  background-color: #ddd
+  background-color: white;
 }
 
-.bgc7, body, input, textarea, .btn9:hover, .btn9:focus {
+.bgc7, input, textarea, .btn9:hover, .btn9:focus {
   background-color: white;
+}
+
+body {
+  background-color: #f1f1f1;
 }
 
 .bgc8, input:focus, textarea:focus, .textbox1:focus, .mi-selected .icon, .mi-boxed .icon, .mi-selected:hover .icon, .mode-move .mi-selected:hover .icon, .overlayWindow {
@@ -699,8 +704,7 @@ a, .btn5:hover, .menuList1 button:hover, .menuList1 a:hover, .menuList1 .menuIte
 body {
   font-size: 1em;
   line-height: 1.5;
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 8em;
   touch-action: manipulation
 }
 
@@ -1182,7 +1186,7 @@ i {
   background-image: linear-gradient(to bottom,rgba(255,255,255,.7) 0,rgba(255,255,255,0) 100%)
 }
 
-.bshadow-none, .menuList0 button, .numberPresets ul button, .menuList0 a, .numberPresets ul a, .btn0:active, .btn0-embossed:active, .btn0-popup:active, .prevSize input {
+/*.bshadow-none, .menuList0 button, .numberPresets ul button, .menuList0 a, .numberPresets ul a, .btn0:active, .btn0-embossed:active, .btn0-popup:active, .prevSize input {
   box-shadow: none !important
 }
 
@@ -1198,17 +1202,13 @@ i {
   box-shadow: inset 0 -2px #ddd
 }
 
-.bshadow-ul1, .btn0:focus, .btn0-embossed:focus, .btn0.focused, .focused.btn0-embossed, .btn1:focus, .btn1-embossed:focus, .btn2:focus, .btn2-embossed:focus, .btn3:focus, .btn3-embossed:focus, .btn4:focus, .btn7:focus, .btn7-embossed:focus, .btn8:focus, .btn8-embossed:focus, .btn8.focused, .focused.btn8-embossed, .glyphName.bshadow-ul1:focus {
-  box-shadow: inset 0 -2px #e74c3c
-}
-
 .bshadow-ul2 {
   box-shadow: 0 1px #d4d4d4,0 2px #F1F1F1,0 3px #d4d4d4
 }
 
 .bshadow-ul3 {
   box-shadow: 0 1px
-}
+}*/
 
 .bshadow-ids, input, textarea {
   box-shadow: inset 0 0 0 2px #e4e4e4
@@ -1839,7 +1839,6 @@ button {
   padding: .5em .75em;
   padding-top: .5em;
   padding-top: .5em;
-  box-shadow: inset 0 -2px 0 rgba(0,0,0,.135)
 }
 
 .btn0:hover, .btn0-embossed:hover {
@@ -1946,11 +1945,11 @@ button[disabled] {
 }
 
 .btn9.selected {
-  box-shadow: inset 0 3px rgba(255,255,255,.94),inset 0 7px #3F51B5,inset -4px 0 10px 1px #fff,inset 4px 0 10px 1px #fff
+  border-bottom: 3px solid #3F51B5;
 }
 
 .btn9:hover, .btn9:focus {
-  box-shadow: inset 0 3px rgba(255,255,255,.94),inset 0 7px #3F51B5
+  border-bottom: 3px solid #3F51B5;
 }
 
 .btn9:hover .chevron-left, .btn9:hover .chevron-right, .btn9:focus .chevron-left, .btn9:focus .chevron-right {
@@ -2116,7 +2115,7 @@ button[disabled] {
 }
 
 .bar-btm {
-  bottom: 0
+  top: 56px;
 }
 
 .tooltip {
@@ -2132,7 +2131,7 @@ button[disabled] {
   top: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0,0,0,.2)
+  background-color: rgba(0,0,0,.48)
 }
 
 .overlayWindow {
@@ -2413,9 +2412,6 @@ button[disabled] {
     width: 33.33333%
   }
 
-  .m1-mtm {
-    margin-top: .75em
-  }
 
   .m1-mrn {
     margin-right: 0
@@ -2437,9 +2433,6 @@ button[disabled] {
     display: none !important
   }
 
-  .m1-size1of1 {
-    width: 100%
-  }
 
   .m1-size4of5 {
     width: 90%
@@ -2478,7 +2471,7 @@ button[disabled] {
   }
 
   .search-history label {
-    margin-right: 1.5em
+    margin-right: .5em
   }
 
   #search {
@@ -2611,10 +2604,6 @@ button[disabled] {
 }
 
 .icons-wrapper {
-  margin-bottom: 12px;
-  padding: 6px 16px 16px;
-  border: 1px solid #d6d6d6;
-  background: #f4f4f4;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  padding: 0 16px 16px;
+  border-bottom: 1px solid #d6d6d6;
 }
