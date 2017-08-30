@@ -1,0 +1,15 @@
+{
+  "name": "staticserver",
+  "description": "Demo Project",
+  "version": "1.0.0",
+  "author": "Dharmesh",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "connect": "*",
+    "serve-static": "*"
+  }
+}
+
+

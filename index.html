@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FontIcon App - Icon Font, SVG, PDF &amp; PNG Generator</title>
+    <meta name="description" content="Using FontIcon you can easily search and download vector icons or generate fonts (icon fonts). This tool can also be used for icon set management. It can generate icon fonts, SVGs, PDFs, PNGs and sprites.">
+    <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#333333">
+    <meta name="msapplication-TileImage" content="tileicon.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preload" href="views/image.html">
+    <link rel="preload" href="views/font.html">
+    <link rel="preload" href="views/lib.html">
+    <link rel="preload" href="fonticon-lib/dict.json">
+</head>
+<body ng-app="fonticonApp" class="rel">
+    <svg width="57" height="57" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+        <g fill="none" fill-rule="evenodd">
+            <g transform="translate(1 1)" stroke-width="2">
+                <circle cx="5" cy="50" r="5">
+                    <animate attributeName="cy" begin="0s" dur="2.2s" values="50;5;50;50" calcMode="linear" repeatCount="indefinite" />
+                    <animate attributeName="cx" begin="0s" dur="2.2s" values="5;27;49;5" calcMode="linear" repeatCount="indefinite" />
+                </circle>
+                <circle cx="27" cy="5" r="5">
+                    <animate attributeName="cy" begin="0s" dur="2.2s" from="5" to="5" values="5;50;50;5" calcMode="linear" repeatCount="indefinite" />
+                    <animate attributeName="cx" begin="0s" dur="2.2s" from="27" to="27" values="27;49;5;27" calcMode="linear" repeatCount="indefinite" />
+                </circle>
+                <circle cx="49" cy="50" r="5">
+                    <animate attributeName="cy" begin="0s" dur="2.2s" values="50;50;5;50" calcMode="linear" repeatCount="indefinite" />
+                    <animate attributeName="cx" from="49" to="49" begin="0s" dur="2.2s" values="49;5;27;49" calcMode="linear" repeatCount="indefinite" />
+                </circle>
+            </g>
+        </g>
+    </svg>
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+    <div class="visuallyhidden"><i class="icon-fonticon"></i></div>
+    <div ng-controller="MsgCtrl" class="ng-cloak overlay" ng-show="message.visible" ng-click="message.hide()">
+        <div mi-absorb-clicks="" class="w-text border-box talign-center centered clearfix bgc8 pal mtl-toolbar bshadow-odl rnds">
+            <div class="mtn mbl" ng-bind-html="message.getMessage()"></div>
+            <button ng-show="!message.secondButton" mi-focus-when="{{message.visible}}" class="btn0" ng-click="message.hide()">Dismiss</button>
+            <button ng-show="message.firstButton" mi-focus-when="{{message.visible && message.firstButton.focused}}" class="btn0 size1of5 m1-size1of3 mrl" ng-click="message.hide(message.firstButton.caption)" ng-bind="message.firstButton.caption"></button>
+            <button ng-show="message.secondButton" mi-focus-when="{{message.visible && message.secondButton.focused}}" class="btn0 size1of5 m1-size1of3 mll" ng-click="message.hide(message.secondButton.caption)" ng-bind="message.secondButton.caption"></button>
+        </div>
+    </div>
+    <!--[if lte IE 9]>
+      <p class="talign-center">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to use this app.</p>
+    <![endif]-->
+    <!--[if gt IE 9]><!-->
+    <div class="container" ng-view=""></div>
+    <div ui-view="">
+        <div ng-controller="MsgCtrl" class="w-main talign-center fs5 fgc4 ff0">
+            <div class="iblk ng-cloak fgc2" ng-if="message.getRawMessage()">
+                <svg width="16" height="16">
+                    <circle cx="8" cy="8" r="7" stroke-width="2" stroke="#ddd" fill="none"></circle>
+                    <circle transform="translate(8 8) rotate(-90) translate(-8 -8)" cx="8" cy="8" r="7" stroke-width="2" stroke="currentcolor" stroke-dasharray="0 44 44 0" stroke-dashoffset="-{{message.getRawMessage() * 44}}" fill="none"></circle>
+                </svg>
+            </div>
+            <div class="iblk fgc2" ng-if="!message.getRawMessage()">
+                <svg class="icon-spinner spinner"><use xlink:href="#icon-spinner"></use></svg>
+            </div>
+            Loading&hellip;
+        </div>
+    </div>
+    <!--<![endif]-->
+    <script src="components/angular/angular-sha3d71416.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/idbwrapper/idbstore.min.js?v1.6.2"></script>
+    <script src="bower_components/file-saver/FileSaver.min.js" async=""></script>
+
+    <script src="scripts/app.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        var _gaq = [['_setAccount', 'UA-26981823-1'], ['_trackPageview']];
+        (function (d, t) {
+            var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s)
+        }(document, 'script'));
+    </script>
+</body>
+</html>
