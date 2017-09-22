@@ -1,12 +1,12 @@
 <div class="mode-{{mode}}" mi-file-over="">
   <div class="bar-top print-hidden" id="toolbar">
-    <!-- <div class="rel">
+    <div class="rel">
       <button class="unit btn0 mlm mrl m0-mrs m0-mlm" mi-popup="focus">
         <i class="icon-menu"></i>
         <span class="visuallyhidden">Menu</span>
       </button>
       <ul class="w-menu absl layer-front2 menuList1 mtxl ptm talign-left hidden">
-        <!-- <li><button ng-click="newProject()"><i class="icon-new mrs"></i>New Project</button></li> -- >
+        <!-- <li><button ng-click="newProject()"><i class="icon-new mrs"></i>New Project</button></li> -->
         <li><a href="#/projects"><i class="icon-stack mrs"></i>Manage Projects</a></li>
         <li><button ng-click="newSetFromSelection([], true)"><i class="icon-new2 mrs"></i>New Empty Set</button></li>
         <li><button ng-click="newSetFromSelection(false, true)"><i class="icon-new-set mrs"></i>New Set From Selection</button></li>
@@ -17,20 +17,20 @@
         <li ng-show="signedIn"><a href="https://i.fonticon.io/logout"><i class="icon-exit mrs"></i>Sign Out</a></li>
         <li ng-if="!!expiration"><button ng-click="showWarning()"><i class="icon-warning mrs fgc-{{expiration}}"></i>{{expMessage}}</button></li>
       </ul>
-    </div>-->
+    </div>
     <div class="w-main phm clearfix m0-phn">
       <header ng-if="tab === 'select.library'" class="unit ptt mrl"><h1 class="fs4 mvn lh1 unit m0-mls m0-fs5">Library</h1></header>
       <div ng-show="tab === 'select'" class="unit mrl m0-mrs">
-        <!--<div class="file unit" id="file">
+        <div class="file unit" id="file">
           <mi-file type-regex=".svg|.json|text|plain" focused="importFocused" on-open="import(files)"></mi-file>
           <div class="btn8 size1of1 m0-phm" ng-class="importFocused ? 'focused': ''">
             <i class="icon-import mrs m0-hidden"></i>
             <span>Import<span class="m0-hidden"> Icons</span></span>
           </div>
-        </div>-->
-        <!--<a mi-tooltip="{marginTop: 12, class: 'tooltip arrow-t', text: 'Icon Library'}" href="#/select/library" class="m1-hidden unit mls btn8">
-                <i class="icon-library"></i>
-        </a>-->
+        </div>
+        <a mi-tooltip="{marginTop: 12, class: 'tooltip arrow-t', text: 'Icon Library'}" href="#/select/library" class="m1-hidden unit mls btn8">
+          <i class="icon-library"></i>
+        </a>
       </div>
       <div ng-show="tab === 'select.font'">
         <!-- <mi-presets class="unit numberPresets mrl m0-mrs" model="pref.prevSize" def="pref.prevSize || 32" min="6" max="64" presets="[16, 32, 48, 64]"><i class="icon-eye mls fgc3"></i></mi-presets> -->
@@ -112,32 +112,32 @@
           </button>
         </div>
       </div>
-      <!--<div class="m2-hidden">
+      <div class="m2-hidden">
         <span class="unitRight talign-right width7 noOverflow2 pvt fgc4">{{::project.metadata.name}}</span>
         <a class="unitRight fgc4 btn5 pvt phs" href="#/projects" mi-tooltip="{marginTop: 12, class: 'tooltip arrow-t', text: 'Manage Projects'}"><i class="icon-stack pat"></i></a>
         <!-- <input type="text" class="textbox0 fgc4 unitRight talign-right width7 noOverflow2" placeholder="Project Name" ng-model="project.metadata.name" /> -->
+      </div>
     </div>
-  </div>
-  <div class="absl top-right mbn mtm mrm fgc5 m1-hidden lh0">
-    <button ng-if="!!expiration" ng-click="showWarning()" class="pan">
-      <i ng-if="cloudAccess" class="fs3 lh1 pts pls icon-{{isSyncing() ? 'sync fgc-warning' : 'fonticon fgc5'}}">
-        <i class="icon-warning fgc-{{expiration}} fs-down absl notification-left"></i>
-      </i>
-      <i ng-if="!cloudAccess" class="fgc4 icon-neutral lh1 fs3 pls pts" data-icon2="&#xe63f;">
-        <i class="icon-warning fgc-{{expiration}} fs-down absl notification-left"></i>
-      </i>
-    </button>
-    <button ng-if="cloudAccess && isSyncing() === 'failed'" ng-click="showWarning('Syncing failed. Retrying&hellip;<br />Please check your Internet connection.')" class="pan">
-      <i class="fs3 lh1 pts pls icon-sync fgc4">
-        <i class="icon-warning fgc-error fs-down absl notification-left"></i>
-      </i>
-    </button>
-    <i ng-if="cloudAccess && !expiration && isSyncing() !== 'failed'" class="fs3 lh1 icon-{{isSyncing() ? 'sync fgc-warning' : 'fonticon'}}"></i>
-    <a target="_blank" ng-if="!cloudAccess && !expiration" href="https://fonticon.io/#hi/r3f04" class="fgc4 transparent hoverE-icon"><i class="icon-neutral lh1 fs3" data-icon2="&#xe63f;"></i><span class="visuallyhidden">Hi!</span></a>
-    <!--<button ng-if="abTest === 'b' && !cloudAccess && !expiration" ng-click="showPromo()" class="pan hoverE-icon fgc4">
+    <div class="absl top-right mbn mtm mrm fgc5 m1-hidden lh0">
+      <button ng-if="!!expiration" ng-click="showWarning()" class="pan">
+        <i ng-if="cloudAccess" class="fs3 lh1 pts pls icon-{{isSyncing() ? 'sync fgc-warning' : 'fonticon fgc5'}}">
+          <i class="icon-warning fgc-{{expiration}} fs-down absl notification-left"></i>
+        </i>
+        <i ng-if="!cloudAccess" class="fgc4 icon-neutral lh1 fs3 pls pts" data-icon2="&#xe63f;">
+          <i class="icon-warning fgc-{{expiration}} fs-down absl notification-left"></i>
+        </i>
+      </button>
+      <button ng-if="cloudAccess && isSyncing() === 'failed'" ng-click="showWarning('Syncing failed. Retrying&hellip;<br />Please check your Internet connection.')" class="pan">
+        <i class="fs3 lh1 pts pls icon-sync fgc4">
+          <i class="icon-warning fgc-error fs-down absl notification-left"></i>
+        </i>
+      </button>
+      <i ng-if="cloudAccess && !expiration && isSyncing() !== 'failed'" class="fs3 lh1 icon-{{isSyncing() ? 'sync fgc-warning' : 'fonticon'}}"></i>
+      <a target="_blank" ng-if="!cloudAccess && !expiration" href="https://fonticon.io/#hi/r3f04" class="fgc4 transparent hoverE-icon"><i class="icon-neutral lh1 fs3" data-icon2="&#xe63f;"></i><span class="visuallyhidden">Hi!</span></a>
+      <!--<button ng-if="abTest === 'b' && !cloudAccess && !expiration" ng-click="showPromo()" class="pan hoverE-icon fgc4">
         <i class="icon-neutral lh1 fs3" data-icon2="&#xe63f;"></i>
-      </button>-- >
-    </div>-->
+      </button>-->
+    </div>
   </div> <!-- End of tob bar -->
   <div ng-show="tab === 'select'">
     <div ng-if="project.iconSets.length === 0" class="miFileZone w-main phm mbl">
@@ -262,7 +262,7 @@
           <i class="mrs icon-image"></i><span class="m1-hidden rel">Generate </span>SVG<span class="m3-unhidden">, &hellip;</span><span class="m3-hidden"> &amp; More</span>
         </a><span class="btn9 selected size1of3 cursor-pointer rel">
           Selection <span class="m1-hidden">({{getSelectionCount()}})</span>
-          <!--<span class="chevron-right absl top-right layer-front"></span><span class="chevron-left absl top-left layer-front"></span>-->
+          <span class="chevron-right absl top-right layer-front"></span><span class="chevron-left absl top-left layer-front"></span>
         </span><a href="#/select/font" class="btn9 iblk size1of3 sep-right {{getSelectionCount() === 0 ? 'transparent-more' : ''}}">
           <span class="m1-hidden">Generate </span>Font<i class="mls icon-font icon-low"></i>
         </a>
@@ -349,11 +349,11 @@
           <i class="icon-cw"></i>
           <span class="visuallyhidden">Rotate 90 &deg; CW</span>
         </button>
-        <button ng-click="flipHorizontal()" class="btn0 width4" mi-tooltip="{marginBottom: 4, text: 'Flip Horizontal'}">
+        <button ng-click="flipHorizontal()" class="btn0 width4" mi-tooltip="{marginBottom: 4, text: 'Flip Horizontally'}">
           <i class="icon-flip-h"></i>
           <span class="visuallyhidden">Flip Horizontally</span>
         </button>
-        <button ng-click="flipVertical()" class="btn0 width4" mi-tooltip="{marginBottom: 4, text: 'Flip Vertical'}">
+        <button ng-click="flipVertical()" class="btn0 width4" mi-tooltip="{marginBottom: 4, text: 'Flip Vertically'}">
           <i class="icon-flip-v"></i>
           <span class="visuallyhidden">Flip Vertically</span>
         </button>

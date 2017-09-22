@@ -2114,6 +2114,10 @@ button[disabled] {
   transform: translatez(0)
 }
 
+.bar-top {
+  z-index: 1100;
+}
+
 .bar-btm {
   top: 56px;
 }
