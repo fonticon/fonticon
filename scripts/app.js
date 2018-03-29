@@ -4013,37 +4013,39 @@ function RGBColor(a) {
       return f
     }
     function A(a, b, f, g) {
-      var h, j, k, l, m, n, o, p, q, r, s, t, u, v = function (a, b) {
+      var h, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x = function (a, b) {
         return {
           x: (a.x + b.x) / 2,
           y: (a.y + b.y) / 2
         }
-      }, w = v(a, b), x = v(f, g), y = c(a, b, .75), z = c(g, f, .75), A = (g.x - a.x) / 16, B = (g.y - a.y) / 16;
-      return m = v(y, z),
-        y.offCurve = !0,
-        z.offCurve = !0,
-        n = [a, y, m],
-        o = [m, z, g],
-        p = [a, w, y, m],
-        q = [m, z, x, g],
+      }, y = x(a, b), z = x(f, g), A = c(a, b, .75), B = c(g, f, .75), C = (g.x - a.x) / 16, D = (g.y - a.y) / 16;
+      return n = x(A, B),
+        A.offCurve = !0,
+        B.offCurve = !0,
+        p = [a, A, n],
+        q = [n, B, g],
+        r = [a, y, A, n],
+        s = [n, B, z, g],
         h = c(a, b, 3 / 8),
-        j = c(y, z, 3 / 8),
-        j.x -= A,
-        j.y -= B,
-        k = c(z, y, 3 / 8),
-        k.x += A,
-        k.y += B,
+        j = c(A, B, 3 / 8),
+        j.x -= C,
+        j.y -= D,
+        k = c(B, A, 3 / 8),
+        k.x += C,
+        k.y += D,
         l = c(g, f, 3 / 8),
+        m = x(h, j),
+        o = x(k, l),
         h.offCurve = !0,
         j.offCurve = !0,
         k.offCurve = !0,
         l.offCurve = !0,
-        r = i(e(p, .5), d(n, .5)) < 10 ? [y, m] : [h, j, m],
-        s = i(e(q, .5), d(o, .5)) < 10 ? [z, g] : [k, l, g],
-        t = r.length - 1,
-        u = s.length - 1,
-        i(v(r[t - 1], s[0]), r[t]) < 1 && r.splice(t),
-        r.concat(s)
+        t = i(e(r, .5), d(p, .5)) < 10 ? [A, n] : [h, m, j, n],
+        u = i(e(s, .5), d(q, .5)) < 10 ? [B, g] : [k, o, l, g],
+        v = t.length - 1,
+        w = u.length - 1,
+        i(x(t[v - 1], u[0]), t[v]) < 1 && t.splice(v),
+        t.concat(u)
     }
     function B(a, b) {
       var c = []
@@ -4620,55 +4622,57 @@ function RGBColor(a) {
       return c(o)
     }
     function K(a) {
-      var b, c, d, e, f = {}, g = {};
-      d = a[0].getAttribute("viewBox"),
-        d && (d = d.trim().split(/\s*[\,\s]\s*/),
-          f.x = Number(d[0]),
-          f.y = Number(d[1]),
-          f.w = Number(d[2]),
-          f.h = Number(d[3]));
+      var b, c, d, e, f, g = {}, h = {};
+      e = a[0].getAttribute("viewBox"),
+        e && (e = e.trim().split(/\s*[\,\s]\s*/),
+          g.x = Number(e[0]),
+          g.y = Number(e[1]),
+          g.w = Number(e[2]),
+          g.h = Number(e[3]));
       try {
-        e = 2 === a[0].width.baseVal.unitType ? f.w * a[0].width.baseVal.valueInSpecifiedUnits / 100 : a[0].width.baseVal.valueInSpecifiedUnits || a[0].width.baseVal.value,
-          c = 2 === a[0].height.baseVal.unitType ? f.h * a[0].width.baseVal.valueInSpecifiedUnits / 100 : a[0].height.baseVal.valueInSpecifiedUnits || a[0].height.baseVal.value
-      } catch (h) {
+        f = 2 === a[0].width.baseVal.unitType ? g.w * a[0].width.baseVal.valueInSpecifiedUnits / 100 : a[0].width.baseVal.valueInSpecifiedUnits || a[0].width.baseVal.value,
+          d = 2 === a[0].height.baseVal.unitType ? g.h * a[0].width.baseVal.valueInSpecifiedUnits / 100 : a[0].height.baseVal.valueInSpecifiedUnits || a[0].height.baseVal.value
+      } catch (i) {
         try {
           b = a[0].getBBox(),
-            e = b.width,
-            c = b.height
-        } catch (i) {
-          e = f.w,
-            c = f.h
+            f = b.width,
+            d = b.height
+        } catch (j) {
+          f = g.w,
+            d = g.h
         }
       }
-      if (!d)
-        return {
-          viewBox: {
-            x: 0,
-            y: 0,
-            width: e,
-            height: c
-          },
-          transform: !1
-        };
-      if (e = e || f.w,
-        c = c || f.h,
-        f.w < 0 || f.h < 0)
+      if (e || (e = a.clone()[0],
+        document.body.appendChild(e),
+        c = e.getBoundingClientRect(),
+        g = {
+          x: 0,
+          y: 0,
+          w: c.width,
+          h: c.height
+        },
+        e.setAttribute("width", c.width),
+        e.setAttribute("height", c.height),
+        document.body.removeChild(e)),
+        f = f || g.w,
+        d = d || g.h,
+        g.w < 0 || g.h < 0)
         throw new Error("Invalid viewBox.");
-      return e >= c && f.w >= f.h || c >= e && f.w >= f.h ? (g.a = g.d = e / f.w,
-        g.e = 0) : (c >= e && f.w <= f.h || e >= c && f.w <= f.h) && (g.d = g.a = c / f.h),
-        g.a && (g.f = (c - g.d * f.h) / 2,
-          g.e = (e - g.a * f.w) / 2,
-          g.e -= f.x * g.a,
-          g.f -= f.y * g.d),
-        !isNaN(g.a) && 1 !== g.a || g.e || g.f || (g = !1),
+      return f >= d && g.w >= g.h || d >= f && g.w >= g.h ? (h.a = h.d = f / g.w,
+        h.e = 0) : (d >= f && g.w <= g.h || f >= d && g.w <= g.h) && (h.d = h.a = d / g.h),
+        h.a && (h.f = (d - h.d * g.h) / 2,
+          h.e = (f - h.a * g.w) / 2,
+          h.e -= g.x * h.a,
+          h.f -= g.y * h.d),
+        !isNaN(h.a) && 1 !== h.a || h.e || h.f || (h = !1),
         {
           viewBox: {
             x: 0,
             y: 0,
-            width: e,
-            height: c
+            width: f,
+            height: d
           },
-          transform: g
+          transform: h
         }
     }
     function L(a) {
@@ -4809,7 +4813,7 @@ function RGBColor(a) {
           if ((F || G) && (G = G || F,
             "hidden" === G && (g.visibility = !0)),
             a.is("use") && (H = a.attr("xlink:href").trim(),
-              "#" === H[0] && (H = k.querySelector(H),
+              "#" === H[0] && (H = k.getElementById(H.slice(1)),
                 H && !function () {
                   var b;
                   H = P(H).clone(),
@@ -8060,7 +8064,7 @@ function RGBColor(a) {
             var b = a.target.tagName.toUpperCase();
             a.stopPropagation(),
               ("A" === b || "BUTTON" === b || "I" === b) && (h(),
-                "A" !== a.target.tagName.toUpperCase() && a.preventDefault())
+                "A" !== a.target.tagName.toUpperCase() && a.preventDefault());
           }),
           "focus" === c.miPopup ? !function () {
             var a, c, d, f;
@@ -9026,8 +9030,7 @@ function RGBColor(a) {
   }
   ]),
   "#library" === location.hash && (location.hash = "#/select/library"),
-  angular.module("fonticonApp", ["ui.router", "storage", "svg", "font", "tmpl", "color", "swatch", "csh", "file", "moonui", "cloud", "search"])
-    .config(["$stateProvider", "$urlRouterProvider", "$compileProvider", function (a, b, c) {
+  angular.module("fonticonApp", ["ui.router", "storage", "svg", "font", "tmpl", "color", "swatch", "csh", "file", "moonui", "cloud", "search"]).config(["$stateProvider", "$urlRouterProvider", "$compileProvider", function (a, b, c) {
     b.otherwise("/select"),
       c.debugInfoEnabled(!1),
       c.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|chrome-extension):|data:image\//),
@@ -9813,7 +9816,8 @@ function RGBColor(a) {
       var c, d, e, f, h, k, l;
       if (!b || !a)
         return !1;
-      if ("string" == typeof a)
+      if (b = b.replace(/\\/g, "").replace(/\./g, "\\."),
+        "string" == typeof a)
         a = a.replace(/[\s\-\,_]+/g, " "),
           a = a.split(" ").concat([a.replace(/\s+/g, "")]);
       else if (a.slice) {
@@ -10374,9 +10378,9 @@ function RGBColor(a) {
             !a.colorPermutations[d] || a.colorPermutations[d].length !== a.attrs.length)
             for (a.colorPermutations[d] = [],
               b = 0; b < a.attrs.length; b += 1)
-              a.attrs[b] && a.attrs[b].fill && "none" !== a.attrs[b].fill && (a.colorPermutations[d][b] = a.colorPermutations[d][b] || {},
-                a.colorPermutations[d][b].f = e.indexOf(i(a.attrs[b].fill).toString()),
-                -1 === a.colorPermutations[d][b].f && (a.colorPermutations[d][b].f = 0)),
+              a.colorPermutations[d][b] = a.colorPermutations[d][b] || {},
+                a.attrs[b] && a.attrs[b].fill && "none" !== a.attrs[b].fill && (a.colorPermutations[d][b].f = e.indexOf(i(a.attrs[b].fill).toString()),
+                  -1 === a.colorPermutations[d][b].f && (a.colorPermutations[d][b].f = 0)),
                 a.attrs[b] && a.attrs[b].stroke && a.attrs[b].strokeWidth > 0 && (a.colorPermutations[d][b].s = e.indexOf(i(a.attrs[b].stroke).toString()),
                   -1 === a.colorPermutations[d][b].s && (a.colorPermutations[d][b].s = 0))
         })
@@ -12055,6 +12059,10 @@ function RGBColor(a) {
           c >= 0 && c < d.paths.length && (a.pathIdx = c)
       }
       ,
+      a.makeSquare = function () {
+        r.icons[r.idx].width = r.icons[r.idx].height
+      }
+      ,
       a.increaseWidth = function () {
         var a = m();
         isNaN(r.icons[r.idx].width) && (r.icons[r.idx].width = t),
@@ -12250,9 +12258,7 @@ function RGBColor(a) {
       })
   }
   ]),
-  angular.module("fonticonApp").controller("FontCtrl",
-  ["$scope", "$state", "$q", "$sce", "$timeout", "svgPath", "font", "template", "fileSaver", "cloud", "message", "color",
-    function (a, b, c, d, e, f, g, h, i, j, k, l) {
+  angular.module("fonticonApp").controller("FontCtrl", ["$scope", "$state", "$q", "$sce", "$timeout", "svgPath", "font", "template", "fileSaver", "cloud", "message", "color", function (a, b, c, d, e, f, g, h, i, j, k, l) {
     function m(a) {
       var b, c, d, e;
       if ("string" == typeof a)
@@ -12629,7 +12635,7 @@ function RGBColor(a) {
               },
                 !A.isMulticolor)
                 try {
-                  A.attrs[0].fill ? K.single.color = {
+                  A.attrs[0].fill && "none" !== A.attrs[0].fill ? K.single.color = {
                     value: l(A.attrs[0].fill).toString({
                       hex: !0,
                       forCSS: !0
@@ -12756,16 +12762,18 @@ function RGBColor(a) {
                     single: j,
                     paths: [j]
                   }]
-                }),
-                m.add("variables." + d, a.fillup({
-                  glyphs: R,
-                  filepath: function () {
-                    var a = b ? "." : "fonts";
-                    return "scss" === k ? '$fonticon-font-path: "' + a + '" !default;' : "less" === k ? '@fonticon-font-path: "' + a + '";' : "styl" === k ? 'fonticon-font-path ?= "' + a + '"' : void 0
-                  }()
-                })),
+                });
+              var l = a.fillup({
+                glyphs: R,
+                filepath: function () {
+                  var a = b ? "." : "fonts";
+                  return "scss" === k ? '$fonticon-font-path: "' + a + '" !default;' : "less" === k ? '@fonticon-font-path: "' + a + '";' : "styl" === k ? 'fonticon-font-path ?= "' + a + '"' : void 0
+                }()
+              });
+              "scss" === k && (l = l.replace(/\"\\/g, "\\").replace(/\";/g, ";")),
+                m.add("variables." + d, l),
                 r.promise.then(function (a) {
-                  h().get("style." + ("styl" === k ? "styl" : "scss") + ".tmpl").then(function (b) {
+                  h().get("style." + k + ".tmpl").then(function (b) {
                     b.fillup({
                       glyphs: [{
                         single: j,
@@ -13048,7 +13056,7 @@ function RGBColor(a) {
                 z[l].hide = !1,
                 l += 1;
             o = w.properties.ligatures,
-              q.isMulticolor && "string" == typeof o && (w.properties.ligatures = "");
+              q.isMulticolor && "string" == typeof o && (w.properties.ligatures = "")
           }
           for (a.numOfGlyphs = u(),
             a.tmp.resetTo = a.numOfGlyphs,
@@ -13109,7 +13117,7 @@ function RGBColor(a) {
             b.cssVars && (b.cssVarsFormat && "sass" !== b.cssVarsFormat || (b.cssVarsFormat = "scss"),
               "stylus" === b.cssVarsFormat && (b.cssVarsFormat = "styl"),
               h().get("variables.tmpl"),
-              b.cssVarsFormat && "scss" !== b.cssVarsFormat && "less" !== b.cssVarsFormat ? "styl" === b.cssVarsFormat && h().get("style.styl.tmpl") : h().get("style.scss.tmpl")),
+              b.cssVarsFormat && "scss" !== b.cssVarsFormat ? "less" === b.cssVarsFormat ? h().get("style.less.tmpl") : "styl" === b.cssVarsFormat && h().get("style.styl.tmpl") : h().get("style.scss.tmpl")),
             b.ie7 && (h().get("ie7.js.tmpl"),
               h().get("ie7.css.tmpl"))
         }, !0)
@@ -13203,7 +13211,7 @@ function RGBColor(a) {
           "class" === j.selector && (i = j.classSelector.slice(1) + " "),
           !k.isMulticolor)
           try {
-            k.attrs[0].fill && (o = "  color: " + l(k.attrs[0].fill).toString({
+            k.attrs[0].fill && "none" !== k.attrs[0].fill && (o = "  color: " + l(k.attrs[0].fill).toString({
               hex: !0,
               forCSS: !0
             }) + ";\n")
@@ -14439,7 +14447,7 @@ function RGBColor(a) {
               }),
                 void (n = setTimeout(function () {
                   m.order = a.order,
-                    l || q.quickSave(m)
+                    l || q.quickSave(m);
                 }, 1e3)))
           })
       })

@@ -1967,19 +1967,19 @@
 "name": "svg"
 },
 {
-"ligatures": "IcoMoon, icomoon",
-"name": "IcoMoon"
+"ligatures": "FontIcon, fonticon",
+"name": "FontIcon"
 }
 ],
-  "metadata": {
-    "name": "IcoMoon - Free",
-    "licenseURL": "https://icomoon.io/#icons-icomoon",
-    "license": "GPL or CC BY 4.0",
-    "designerURL": "http://DFontIcon.com",
-    "designer": "DFontIcon",
-    "url": "https://icomoon.io/#icons-icomoon",
-    "iconsHash": 767040192
-  },
+"metadata": {
+"name": "FontIcon - Free",
+"licenseURL": "https://fonticon.io/#icons-fonticon",
+"license": "GPL or CC BY 4.0",
+"designerURL": "http://keyamoon.com",
+"designer": "DFontIcon",
+"url": "https://fonticon.io/#icons-fonticon",
+"iconsHash": 767040192
+},
 "height": 1024,
 "icons": [
 {
@@ -8469,8 +8469,8 @@
 "M259.544 511.998c0-65.416 53.030-118.446 118.446-118.446s118.446 53.030 118.446 118.446c0 65.416-53.030 118.446-118.446 118.446s-118.446-53.030-118.446-118.446zM512.004 0c-282.774 0-512.004 229.232-512.004 512s229.226 512 512.004 512c282.764 0 511.996-229.23 511.996-512 0-282.768-229.23-512-511.996-512zM379.396 959.282c-153.956-89.574-257.468-256.324-257.468-447.282s103.512-357.708 257.462-447.282c154.010 89.562 257.59 256.288 257.59 447.282 0 190.988-103.58 357.718-257.584 447.282z"
 ],
 "tags": [
-"IcoMoon",
-"icomoon",
+"FontIcon",
+"fonticon",
 "brand"
 ],
 "defaultCode": 60138,
@@ -8478,5 +8478,5 @@
 }
 ],
 "prevSize": 32,
-"IcoMoonType": "icon-set"
+"FontIconType": "icon-set"
 }

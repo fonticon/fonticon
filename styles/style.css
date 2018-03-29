@@ -86,9 +86,9 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   cursor: pointer
 }
 
-button[disabled], html input[disabled] {
-  cursor: default
-}
+  button[disabled], html input[disabled] {
+    cursor: default
+  }
 
 input[type=checkbox], input[type=radio] {
   -moz-box-sizing: border-box;
@@ -101,9 +101,9 @@ input[type=search] {
   box-sizing: content-box
 }
 
-input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none
-}
+  input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+  }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
@@ -660,14 +660,14 @@ body {
   width: 1px
 }
 
-.visuallyhidden.focusable:active, #uniCharts input.focusable:active, .visuallyhidden.focusable:focus, #uniCharts input.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto
-}
+  .visuallyhidden.focusable:active, #uniCharts input.focusable:active, .visuallyhidden.focusable:focus, #uniCharts input.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto
+  }
 
 .invisible {
   visibility: hidden
@@ -1134,51 +1134,51 @@ i {
   border-color: #fff
 }
 
-.chevron-right:before {
-  width: 0;
-  height: 0;
-  margin-top: 6px;
-  border: 15px solid;
-  border-color: #b8b8b8;
-  border-top: 24px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 24px solid transparent
-}
+  .chevron-right:before {
+    width: 0;
+    height: 0;
+    margin-top: 6px;
+    border: 15px solid;
+    border-color: #b8b8b8;
+    border-top: 24px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 24px solid transparent
+  }
 
-.chevron-right:after {
-  width: 0;
-  height: 0;
-  margin-top: 6px;
-  border: 10px solid;
-  border-color: inherit;
-  border-top: 24px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 24px solid transparent
-}
+  .chevron-right:after {
+    width: 0;
+    height: 0;
+    margin-top: 6px;
+    border: 10px solid;
+    border-color: inherit;
+    border-top: 24px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 24px solid transparent
+  }
 
-.chevron-left:before {
-  width: 0;
-  height: 0;
-  margin-top: 6px;
-  margin-left: -30px;
-  border: 15px solid;
-  border-color: #b8b8b8;
-  border-top: 24px solid transparent;
-  border-left: 15px solid transparent;
-  border-bottom: 24px solid transparent
-}
+  .chevron-left:before {
+    width: 0;
+    height: 0;
+    margin-top: 6px;
+    margin-left: -30px;
+    border: 15px solid;
+    border-color: #b8b8b8;
+    border-top: 24px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 24px solid transparent
+  }
 
-.chevron-left:after {
-  width: 0;
-  height: 0;
-  margin-top: 6px;
-  margin-left: -18px;
-  border: 10px solid;
-  border-color: inherit;
-  border-top: 24px solid transparent;
-  border-left: 8px solid transparent;
-  border-bottom: 24px solid transparent
-}
+  .chevron-left:after {
+    width: 0;
+    height: 0;
+    margin-top: 6px;
+    margin-left: -18px;
+    border: 10px solid;
+    border-color: inherit;
+    border-top: 24px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 24px solid transparent
+  }
 
 .grad-lighten, .card {
   background-image: -webkit-linear-gradient(top,rgba(255,255,255,.7) 0,rgba(255,255,255,0) 100%);
@@ -1278,9 +1278,9 @@ i {
   box-shadow: inset 0 2px 0 rgba(0,0,0,.15)
 }
 
-.bshadow-embossed2, .btn1:active, .btn1-embossed:active {
-  box-shadow: inset 0 1px 0 1px rgba(0,0,0,.15)
-}
+  .bshadow-embossed2, .btn1:active, .btn1-embossed:active {
+    box-shadow: inset 0 1px 0 1px rgba(0,0,0,.15)
+  }
 
 .fs-up {
   font-size: 1.618em;
@@ -1317,9 +1317,9 @@ i {
 a {
 }
 
-a:focus {
-  outline: 0
-}
+  a:focus {
+    outline: 0
+  }
 
 .tshadow-none {
   text-shadow: none
@@ -1489,9 +1489,9 @@ a:focus {
   position: relative
 }
 
-.absl, .svgDefs, .noOverflow1, .menuList0, .numberPresets ul, .menuList3, .prev, .next, .glyph-button, .glyphName, .ribbon, .ribbon i, .colorSlider {
-  position: absolute
-}
+  .absl, .svgDefs, .noOverflow1, .menuList0, .numberPresets ul, .menuList3, .prev, .next, .glyph-button, .glyphName, .ribbon, .ribbon i, .colorSlider {
+    position: absolute
+  }
 
 .fixed, .bar-top, .bar-btm, .tooltip {
   position: fixed
@@ -1702,23 +1702,23 @@ ul, ol {
   background: linear-gradient(to right,#fff 0,rgba(255,255,255,.85) 70%,rgba(255,255,255,.01) 100%)
 }
 
-.menuList1 button, .menuList1 a, .menuList1 .menuItem {
-  width: 80%
-}
+  .menuList1 button, .menuList1 a, .menuList1 .menuItem {
+    width: 80%
+  }
 
-.menuList1:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 14px;
-  bottom: -14px;
-  background: url(../images/9b1b82f0.menu-shadow.png);
-  background-size: 100% 14px
-}
+  .menuList1:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 14px;
+    bottom: -14px;
+    background: url(../images/9b1b82f0.menu-shadow.png);
+    background-size: 100% 14px
+  }
 
-.menuList1.noShadow:before {
-  background: 0 0
-}
+  .menuList1.noShadow:before {
+    background: 0 0
+  }
 
 .menuList2 {
   line-height: 1;
@@ -1727,9 +1727,9 @@ ul, ol {
   background: linear-gradient(to right,rgba(255,255,255,.01) 0,rgba(255,255,255,.9) 30%,#fff 100%)
 }
 
-.menuList2 .prs {
-  padding-right: .5em
-}
+  .menuList2 .prs {
+    padding-right: .5em
+  }
 
 .menuList3 {
   margin-right: -.75em;
@@ -1738,10 +1738,10 @@ ul, ol {
   border-color: #fff
 }
 
-.menuList3:before {
-  left: inherit;
-  right: 1.25em
-}
+  .menuList3:before {
+    left: inherit;
+    right: 1.25em
+  }
 
 textarea:focus {
   outline: 0
@@ -1764,13 +1764,13 @@ input, textarea {
   -webkit-appearance: none
 }
 
-input:active, input:focus, textarea:active, textarea:focus {
-  box-shadow: inset 0 0 0 2px #3F51B5
-}
+  input:active, input:focus, textarea:active, textarea:focus {
+    box-shadow: inset 0 0 0 2px #3F51B5
+  }
 
-input:invalid, textarea:invalid {
-  box-shadow: inset 0 0 0 2px #e74c3c
-}
+  input:invalid, textarea:invalid {
+    box-shadow: inset 0 0 0 2px #e74c3c
+  }
 
 ::-webkit-input-placeholder {
   color: #999
@@ -1801,23 +1801,23 @@ input.border-box, input.unit, input.miBox, input.search-history, .codePoint inpu
   box-shadow: none
 }
 
-.textbox0:hover, .codePoint input:hover, .codePoint .liga:hover {
-  box-shadow: inset 0 -2px #bbb
-}
+  .textbox0:hover, .codePoint input:hover, .codePoint .liga:hover {
+    box-shadow: inset 0 -2px #bbb
+  }
 
-.textbox0:focus, .codePoint input:focus, .codePoint .liga:focus {
-  box-shadow: inset 0 -2px #3F51B5
-}
+  .textbox0:focus, .codePoint input:focus, .codePoint .liga:focus {
+    box-shadow: inset 0 -2px #3F51B5
+  }
 
-.textbox0:hover, .codePoint input:hover, .codePoint .liga:hover, .textbox0:focus, .codePoint input:focus, .codePoint .liga:focus, .glyphName:hover, .glyphName:focus {
-  background: #fff;
-  padding-left: .5em;
-  padding-right: .5em
-}
+  .textbox0:hover, .codePoint input:hover, .codePoint .liga:hover, .textbox0:focus, .codePoint input:focus, .codePoint .liga:focus, .glyphName:hover, .glyphName:focus {
+    background: #fff;
+    padding-left: .5em;
+    padding-right: .5em
+  }
 
-.textbox0:invalid, .codePoint input:invalid, .codePoint .liga:invalid, .textbox0.ng-invalid, .codePoint input.ng-invalid, .codePoint .ng-invalid.liga {
-  box-shadow: inset 0 -2px #e74c3c !important
-}
+  .textbox0:invalid, .codePoint input:invalid, .codePoint .liga:invalid, .textbox0.ng-invalid, .codePoint input.ng-invalid, .codePoint .ng-invalid.liga {
+    box-shadow: inset 0 -2px #e74c3c !important
+  }
 
 .textbox1 {
   background: #f7efe4
@@ -1841,18 +1841,18 @@ button {
   padding-top: .5em;
 }
 
-.btn0:hover, .btn0-embossed:hover {
-  background-color: #ccc
-}
+  .btn0:hover, .btn0-embossed:hover {
+    background-color: #ccc
+  }
 
-.btn0:active, .btn0-embossed:active, .btn0-popup:active {
-  background-color: #555;
-  color: #f1f1f1
-}
+  .btn0:active, .btn0-embossed:active, .btn0-popup:active {
+    background-color: #555;
+    color: #f1f1f1
+  }
 
-.btn0[disabled], [disabled].btn0-embossed {
-  opacity: .5
-}
+  .btn0[disabled], [disabled].btn0-embossed {
+    opacity: .5
+  }
 
 button[disabled] {
   opacity: .7
@@ -1887,17 +1887,17 @@ button[disabled] {
   background-color: transparent
 }
 
-.btn4:focus {
-  color: #3c5875;
-  box-shadow: inset 0 0 0 2px #3c5875;
-  background: transparent
-}
+  .btn4:focus {
+    color: #3c5875;
+    box-shadow: inset 0 0 0 2px #3c5875;
+    background: transparent
+  }
 
-.btn4:hover, .btn4:active, .btn4[disabled], .btn4[disabled]:hover, .btn4[disabled]:focus {
-  background: #3c5875;
-  box-shadow: none;
-  color: #fff
-}
+  .btn4:hover, .btn4:active, .btn4[disabled], .btn4[disabled]:hover, .btn4[disabled]:focus {
+    background: #3c5875;
+    box-shadow: none;
+    color: #fff
+  }
 
 .btn1:hover, .btn1-embossed:hover {
   opacity: .92
@@ -1911,13 +1911,13 @@ button[disabled] {
   box-shadow: none
 }
 
-.btn5:active, .menuList1 button:active, .menuList1 a:active, .menuList1 .menuItem:active, .menuList2 button:active, .menuList2 .menuItem:active, .prev:active, .next:active, #uniCharts i:active {
-  color: #000
-}
+  .btn5:active, .menuList1 button:active, .menuList1 a:active, .menuList1 .menuItem:active, .menuList2 button:active, .menuList2 .menuItem:active, .prev:active, .next:active, #uniCharts i:active {
+    color: #000
+  }
 
-.btn5[disabled]:hover, .menuList1 button[disabled]:hover, .menuList1 a[disabled]:hover, .menuList1 [disabled].menuItem:hover, .menuList2 button[disabled]:hover, .menuList2 [disabled].menuItem:hover, [disabled].prev:hover, [disabled].next:hover, #uniCharts i[disabled]:hover {
-  color: inherit
-}
+  .btn5[disabled]:hover, .menuList1 button[disabled]:hover, .menuList1 a[disabled]:hover, .menuList1 [disabled].menuItem:hover, .menuList2 button[disabled]:hover, .menuList2 [disabled].menuItem:hover, [disabled].prev:hover, [disabled].next:hover, #uniCharts i[disabled]:hover {
+    color: inherit
+  }
 
 .btn6:hover, .btn6:focus, .btn6:active {
   background: 0 0
@@ -1935,53 +1935,53 @@ button[disabled] {
   transition: box-shadow .15s
 }
 
-.btn9 .btn4 {
-  position: relative;
-  top: 9px;
-  width: 50%;
-  min-width: 5.5em;
-  padding-left: 0;
-  padding-right: 0
-}
+  .btn9 .btn4 {
+    position: relative;
+    top: 9px;
+    width: 50%;
+    min-width: 5.5em;
+    padding-left: 0;
+    padding-right: 0
+  }
 
-.btn9.selected {
-  border-bottom: 3px solid #3F51B5;
-}
+  .btn9.selected {
+    border-bottom: 3px solid #3F51B5;
+  }
 
-.btn9:hover, .btn9:focus {
-  border-bottom: 3px solid #3F51B5;
-}
+  .btn9:hover, .btn9:focus {
+    border-bottom: 3px solid #3F51B5;
+  }
 
-.btn9:hover .chevron-left, .btn9:hover .chevron-right, .btn9:focus .chevron-left, .btn9:focus .chevron-right {
-  border-color: #f1f1f1
-}
+    .btn9:hover .chevron-left, .btn9:hover .chevron-right, .btn9:focus .chevron-left, .btn9:focus .chevron-right {
+      border-color: #f1f1f1
+    }
 
-.btn9.selected {
-  background: 0 0
-}
+  .btn9.selected {
+    background: 0 0
+  }
 
-.btn9.selected .chevron-right, .btn9.selected .chevron-left {
-  border-color: #fff
-}
+    .btn9.selected .chevron-right, .btn9.selected .chevron-left {
+      border-color: #fff
+    }
 
 .miBox {
   -webkit-tap-highlight-color: transparent;
   cursor: pointer
 }
 
-.miBox svg {
-  cursor: pointer
-}
+  .miBox svg {
+    cursor: pointer
+  }
 
 .icon, .icon2 {
   overflow: hidden
 }
 
-.icon svg, .icon2 img {
-  -webkit-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  transform-origin: 0 0
-}
+  .icon svg, .icon2 img {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0
+  }
 
 .miBox:hover .icon, .miBox:hover .icon2 {
   box-shadow: inset 0 0 0 .1875em #ccc
@@ -2048,31 +2048,31 @@ button[disabled] {
   cursor: move
 }
 
-.mode-move .miBox:hover svg {
-  cursor: move
-}
+  .mode-move .miBox:hover svg {
+    cursor: move
+  }
 
 .file {
   overflow: hidden;
   height: 2em
 }
 
-.file input {
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  top: -.5em;
-  font-size: 10em;
-  cursor: pointer
-}
+  .file input {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: -.5em;
+    font-size: 10em;
+    cursor: pointer
+  }
 
 .prevSize input {
   opacity: .25
 }
 
-.prevSize input:focus {
-  opacity: 1
-}
+  .prevSize input:focus {
+    opacity: 1
+  }
 
 .numberPresets input {
   width: 2em;
@@ -2093,15 +2093,15 @@ button[disabled] {
   float: left
 }
 
-.btnBar label:first-child, .btnBar button:first-child, .btnBar label:first-child:hover, .btnBar button:first-child:hover {
-  position: relative;
-  z-index: 1
-}
+  .btnBar label:first-child, .btnBar button:first-child, .btnBar label:first-child:hover, .btnBar button:first-child:hover {
+    position: relative;
+    z-index: 1
+  }
 
-.btnBar label:last-child, .btnBar button:last-child, .btnBar label:last-child:hover, .btnBar button:last-child:hover {
-  position: relative;
-  z-index: 1
-}
+  .btnBar label:last-child, .btnBar button:last-child, .btnBar label:last-child:hover, .btnBar button:last-child:hover {
+    position: relative;
+    z-index: 1
+  }
 
 .search-history {
   width: 19.25em
@@ -2177,10 +2177,10 @@ button[disabled] {
   pointer-events: none
 }
 
-.edit-grid line {
-  stroke-width: .125em;
-  stroke: #3F51B5
-}
+  .edit-grid line {
+    stroke-width: .125em;
+    stroke: #3F51B5
+  }
 
 .hLines line:first-child, .hLines line:last-child, .vLines line:first-child, .vLines line:last-child {
   stroke-width: .25em
@@ -2212,13 +2212,13 @@ button[disabled] {
   top: 0
 }
 
-.glyphName:hover {
-  box-shadow: inset 0 -2px #bbb
-}
+  .glyphName:hover {
+    box-shadow: inset 0 -2px #bbb
+  }
 
-.glyphName:focus {
-  box-shadow: inset 0 -2px #3F51B5
-}
+  .glyphName:focus {
+    box-shadow: inset 0 -2px #3F51B5
+  }
 
 .codePoint .liga {
   line-height: 2.25;
@@ -2282,71 +2282,71 @@ button[disabled] {
   background: 0 0
 }
 
-.colorSlider:focus {
-  box-shadow: none;
-  background: 0 0
-}
+  .colorSlider:focus {
+    box-shadow: none;
+    background: 0 0
+  }
 
-.colorSlider + svg {
-  width: 100%;
-  height: 1.5em;
-  position: absolute;
-  top: .25em;
-  left: 0;
-  z-index: 1
-}
+  .colorSlider + svg {
+    width: 100%;
+    height: 1.5em;
+    position: absolute;
+    top: .25em;
+    left: 0;
+    z-index: 1
+  }
 
-.colorSlider::-webkit-slider-runnable-track {
-  width: 100%;
-  background: transparent;
-  border: 0;
-  height: 1.5em
-}
+  .colorSlider::-webkit-slider-runnable-track {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    height: 1.5em
+  }
 
-.colorSlider::-moz-range-track {
-  width: 100%;
-  background: transparent;
-  border: 0;
-  height: 1.5em
-}
+  .colorSlider::-moz-range-track {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    height: 1.5em
+  }
 
-.colorSlider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 1.5em;
-  height: 1.5em;
-  background: transparent;
-  border: 2px solid #000;
-  box-shadow: inset 0 0 0 1px #fff
-}
+  .colorSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.5em;
+    height: 1.5em;
+    background: transparent;
+    border: 2px solid #000;
+    box-shadow: inset 0 0 0 1px #fff
+  }
 
-.colorSlider::-moz-range-thumb {
-  width: 1.5em;
-  height: 1.5em;
-  background: transparent;
-  border: 2px solid #000;
-  box-shadow: inset 0 0 0 1px #fff;
-  border-radius: 0
-}
+  .colorSlider::-moz-range-thumb {
+    width: 1.5em;
+    height: 1.5em;
+    background: transparent;
+    border: 2px solid #000;
+    box-shadow: inset 0 0 0 1px #fff;
+    border-radius: 0
+  }
 
-.colorSlider::-ms-track {
-  width: 100%;
-  background: transparent;
-  border: 0;
-  height: 1.5em;
-  color: transparent
-}
+  .colorSlider::-ms-track {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    height: 1.5em;
+    color: transparent
+  }
 
-.colorSlider::-ms-thumb {
-  width: 1.5em;
-  height: 1.5em;
-  background: transparent;
-  border: 2px solid #000;
-  box-shadow: inset 0 0 0 1px #fff
-}
+  .colorSlider::-ms-thumb {
+    width: 1.5em;
+    height: 1.5em;
+    background: transparent;
+    border: 2px solid #000;
+    box-shadow: inset 0 0 0 1px #fff
+  }
 
-.colorSlider::-ms-fill-lower {
-  background: transparent
-}
+  .colorSlider::-ms-fill-lower {
+    background: transparent
+  }
 
 #file, #pref {
   width: 9em
@@ -2454,9 +2454,9 @@ button[disabled] {
     font-family: sans-serif
   }
 
-  .m1-fs5.m1-mbs {
-    margin-bottom: .57049291089em
-  }
+    .m1-fs5.m1-mbs {
+      margin-bottom: .57049291089em
+    }
 
   .m1-mtnl {
     margin-top: -3em

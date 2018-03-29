@@ -53,17 +53,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
 {{glyphs
 {{single
 {{single}}.{{prefix}}{{glyphName}}{{postfix}} {
   &:before {
-    content: {{indicator}}{{prefix}}{{glyphName}}{{postfix}};
+    content: unicode({{indicator}}{{prefix}}{{glyphName}}{{postfix}}); {{color
+    {{color}}
+    color: {{value}};}}
   }
 }
 }}{{paths
 .{{prefix}}{{glyphName}}{{postfix}}{{pathClass}} {
   &:before {
-    content: {{indicator}}{{prefix}}{{glyphName}}{{postfix}}-path{{pathIdx}};{{marginLeft
+    content: unicode({{indicator}}{{prefix}}{{glyphName}}{{postfix}}-path{{pathIdx}});{{marginLeft
   {{marginLeft}}
     margin-left: {{value}};}}{{color
   {{color}}

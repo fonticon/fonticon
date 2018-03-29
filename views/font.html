@@ -177,7 +177,7 @@
         <i class="icon-close fs3 mvn lh1" data-icon2="&#xe611;"></i>
         <span class="visuallyhidden">Close</span>
       </button>
-      <p class="mtn">Specify a range to reset char codes or ligatures. You can find a glyph's index by hovering it.</p>
+      <p class="mtn">Specify a range to reset character codes or ligatures. You can find a glyph's index by hovering over it.</p>
       <form>
         <label mi-focus-when="{{visiblePanels.reset !== false}}">
           from #
@@ -426,10 +426,7 @@
     <div class="w-main phm m0-phn">
       <a href="#/select/image" class="btn9 iblk size1of3 m0-size2of5 sep-left {{getSelectionCount() === 0 ? 'transparent-more': ''}}">
         <i class="mrs icon-image"></i><span class="m1-hidden rel">Generate </span>SVG<span class="m3-unhidden">, &hellip;</span><span class="m3-hidden"> &amp; More</span>
-      </a><a href="#/select" class="btn9 size1of3 m0-size1of5 rel">
-        Select<span class="m0-hidden">ion</span><span class="m1-hidden"> ({{getSelectionCount()}})</span>
-        <span class="chevron-right absl top-right layer-front m0-hidden"></span><span class="chevron-left absl top-left layer-front m0-hidden"></span>
-      </a><span class="btn9 iblk size1of3 m0-size2of5 sep-right selected rel">
+      </a><a href="#/select" class="btn9 size1of3 m0-size1of5 rel">Select<span class="m0-hidden">ion</span><span class="m1-hidden"> ({{getSelectionCount()}})</span><span class="chevron-right absl top-right layer-front m0-hidden"></span><span class="chevron-left absl top-left layer-front m0-hidden"></span></a><span class="btn9 iblk size1of3 m0-size2of5 sep-right selected rel">
         <span class="fs7 fgc4 absl size1of1 top-left lh3 mts cursor-default">Font</span><button mi-track="{event: 'click', 'category': 'FontIconApp', action: 'Download', label: 'Font'}" ng-click="download()" ng-disabled="downloading" class="btn4"><span ng-if="!downloading">Download</span><span ng-if="downloading">Loading&hellip;</span></button>
         <button class="absl btn6 fgc4 lh-def mls pht m1-hidden" ng-click="visiblePanels.fontPref = true"><i class="icon-cog"></i></button>
       </span>
